@@ -1,7 +1,9 @@
 //Global Variables
-color black=0, resetWhite=255, red=color(255, 0, 0); //Not night mode (lots of Blue)
+color black=0, resetWhite=255; //Not nightMode (lots of Blue)
+color red=color(255, 0, 0), yellow=color(255, 255, 0); //nightMode
+Boolean turnOnYellow=false;
 float rectWidth, rectHeight, ptDiameter;
-//Points are organized by row and actaully ... hint-hint ... value
+//Points are organized by row and actually ... hint-hint ... value
 int numberOfPoints = 17;
 float[] ptX = new float[numberOfPoints];
 float[] ptY = new float[numberOfPoints];
@@ -48,6 +50,9 @@ void setup()
   buttonHeight[3] = appHeight*(1.0/3.0)*(1.0/5.0); //heightDenominator count = 15 ... 1/15
   //
   printArray(buttonX);
+  printArray(buttonY);
+  printArray(buttonWidth);
+  printArray(buttonHeight);
   //
 }//End setup
 //
@@ -63,12 +68,38 @@ void draw() {
   rect(ptX[10], ptY[10], rectWidth, rectHeight);
   rect(ptX[11], ptY[11], rectWidth, rectHeight);
   //
-  fill(black);
-  rect(buttonX[1], buttonY[1], buttonWidth[1], buttonHeight[1]);
-  rect(buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
-  rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+  //HoverOver is yellow
+  if (mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1]) {
+    fill(yellow);
+    rect(buttonX[1], buttonY[1], buttonWidth[1], buttonHeight[1]);
+  } else {
+    fill(black);
+    rect(buttonX[1], buttonY[1], buttonWidth[1], buttonHeight[1]);
+  } //Button 1
+  if (mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2]) {
+    fill(yellow);
+    rect(buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
+  } else {
+    fill(black);
+    rect(buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
+  } //Button 2
+  if (mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3]) {
+    fill(yellow);
+    rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+  } else {
+    fill(black);
+    rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+  } //Button 3
+  if (mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight) {
+    fill(yellow);
+    rect(ptX[3], ptY[3], rectWidth, rectHeight);
+  } else {
+    fill(black);
+    rect(ptX[3], ptY[3], rectWidth, rectHeight);
+  } //Button 4 (RESET), the whole section
   fill(resetWhite);
   //
+  fill(black);
   //Starting pts for rect() must be 1-9 & filled black
   fill(black);
   ellipse(ptX[1], ptY[1], ptDiameter, ptDiameter);
