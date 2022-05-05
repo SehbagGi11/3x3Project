@@ -1,0 +1,1 @@
+void NewsReport() {}//End NewsReport

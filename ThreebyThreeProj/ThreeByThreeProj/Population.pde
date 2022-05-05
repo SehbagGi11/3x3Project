@@ -75,4 +75,27 @@ void Population()
   printArray(buttonY);
   printArray(buttonWidth);
   printArray(buttonHeight);
+  //
+  p1 = loadImage(".jpg");
+  int p1W = ;
+  int p1H = ;
+  if ( p1W >= p1H ) { //ID Larger Dimension: Landscape and Square
+    largerP1D = p1W;
+    smallerP1D = p1H;
+    wP1Larger = true;
+  } else { //ID Larger Dimension: Portrait mode
+    largerP1D = p1H;
+    smallerP1D = p1W;
+    hP1Larger = true;
+  } //End pic1 larger dimension ID
+  println (smallerP1D, largerP1D);
+  if ( wP1Larger == true ) iWRatioP1 = float (largerP1D) / float (largerP1D);
+  if ( wP1Larger == true ) iHRatioP1 = float (smallerP1D) / float (largerP1D);
+  if ( hP1Larger == true ) iWRatioP1 = float (smallerP1D) / float (largerP1D);
+  if ( hP1Larger == true ) iHRatioP1 = float (largerP1D) / float (largerP1D);
+  println(iWRatioP1, iHRatioP1);
+  rectXPic1 = displayWidth*1/4; 
+  rectYPic1 = displayHeight*0; 
+  rectWidthPic1 = displayWidth*1/2; 
+  rectHeightPic1 = displayHeight*1/2;
 }//End Population
