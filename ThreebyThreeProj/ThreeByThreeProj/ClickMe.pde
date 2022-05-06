@@ -14,9 +14,7 @@ void ClickMe()
     turnOnOrange=false;
     turnOnBrown=false;
   }
-  if (mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3]) {
-    println("BTN 3 Activated");
-  }
+  //button[3] switched to Close File
   if (mouseX>=buttonX[4] && mouseX<=buttonX[4]+buttonWidth[4] && mouseY>=buttonY[4] && mouseY<=buttonY[4]+buttonHeight[4]) {
     println("BTN 4 Activated");
   }

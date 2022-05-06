@@ -1,5 +1,5 @@
 //Global Variables
-color black=0, resetWhite=255, orange=#FCC161, brown=#985E00; //Not nightMode (lots of Blue)
+color black=0, resetWhite=255, orange=#FCC161, brown=#985E00, green=#66D165; //Not nightMode (lots of Blue)
 color red=color(255, 0, 0), yellow=color(255, 234, 0); //nightMode
 Boolean turnOnYellow=false, turnOnOrange=false, turnOnBrown=false;
 float rectWidth, rectHeight, ptDiameter;
@@ -65,10 +65,12 @@ void draw() {
 }//End draw
 //
 void keyPressed() {
+  CloseFilekeyPressed();
 }//End keyPressed
 //
 void mousePressed() {
   ClickMe();
+  CloseFilemousePressed();
 }//End mousePressed
 //
 //End MAIN Program

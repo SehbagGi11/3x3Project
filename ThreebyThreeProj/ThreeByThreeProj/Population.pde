@@ -31,10 +31,8 @@ void Population()
   buttonWidth[2] = appWidth*(1.0/3.0)*(3.0/5.0); //widthDenominator count = 6 ... 1/6
   buttonHeight[2] = appHeight*(1.0/3.0)*(1.0/5.0); //heightDenominator count = 6 ... 1/6
   //
-  buttonX[3] = appWidth*(6.0/15.0); //Section 3; subsection 1, numerator is 11
-  buttonY[3] = appHeight*(1.0/3.0)*(3.0/5.0); //Section 3; subsection 2, numerator is 13
-  buttonWidth[3] = appWidth*(1.0/3.0)*(3.0/5.0); //widthDenominator count = 15 ... 1/15
-  buttonHeight[3] = appHeight*(1.0/3.0)*(1.0/5.0); //heightDenominator count = 15 ... 1/15
+  //in CloseFile
+  CloseFileSetUp();
   //
   buttonX[4] = appWidth*(27.0/36.0); //Section 4; subsection 1, numerator is 11
   buttonY[4] = appHeight*(3.0/12.0); //Section 4; subsection 2, numerator is 13
@@ -76,6 +74,7 @@ void Population()
   printArray(buttonWidth);
   printArray(buttonHeight);
   //
+  /*
   p1 = loadImage(".jpg");
   int p1W = ;
   int p1H = ;
@@ -98,4 +97,5 @@ void Population()
   rectYPic1 = displayHeight*0; 
   rectWidthPic1 = displayWidth*1/2; 
   rectHeightPic1 = displayHeight*1/2;
+  */
 }//End Population
