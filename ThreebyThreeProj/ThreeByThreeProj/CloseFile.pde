@@ -1,7 +1,8 @@
-String T = "Restart File";
+String CF = "Close File";
+String RF = "Restart File";
 float TX, TY, TW, TH;
-PFont TFont;
-color TR=#CEB6AD, TresetDefaultInk=#FFFFFF;
+color TR=#CEB6AD;
+float rXP2, rYP2;
 //
 void CloseFileSetUp() {
   buttonX[3] = appWidth*(6.0/15.0); //Section 3; subsection 1, numerator is 11
@@ -18,16 +19,46 @@ void CloseFilekeyPressed() {
 }//End CloseFilekeyPressed
 //
 void CloseFilemousePressed() {
-  if (mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3]) exit(); 
+  if (mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3]) exit();
   {
     println("BTN 3 Activated");
   }
 }//End CloseFilemousePressed
 void CloseFileText() {
-  rect(TX, TY, TW, TH); 
-  fill(TR); 
-  textAlign(CENTER, CENTER); 
-  textFont(TFont, 120); 
-  text(T, TX, TY, TW, TH);
-  fill(TresetDefaultInk);
+  rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+  fill(grey);
+  textAlign(CENTER, CENTER);
+  textFont(npFont, 50);
+  text(CF, buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+  fill(black);
+}//End CloseFileText
+//
+void RestartFileSetUp() {
+  
+}//End RestartFileSetUp
+//
+void RestartFileDraw() {
+  
+}//End RestartFileDraw
+//
+void RestartFilemousePressed() {
+  if (mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2]) {
+    println("BTN 2 Activated");
+    NewsReport=false; 
+    DiaryEntry1=false; 
+    DiaryEntry2=false; 
+    DiaryEntry3=false; 
+    Evidence1=false; 
+    Evidence2=false;
+    Letter=false;
+  }
+}//End RestartFilemousePressed
+//
+void RestartFileText() {
+  rect(buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
+  fill(grey);
+  textAlign(CENTER, CENTER);
+  textFont(npFont, 50);
+  text(RF, buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
+  fill(black);
 }//End CloseFileText

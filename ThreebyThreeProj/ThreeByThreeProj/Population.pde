@@ -74,28 +74,16 @@ void Population()
   printArray(buttonWidth);
   printArray(buttonHeight);
   //
-  /*
-  p1 = loadImage(".jpg");
-  int p1W = ;
-  int p1H = ;
-  if ( p1W >= p1H ) { //ID Larger Dimension: Landscape and Square
-    largerP1D = p1W;
-    smallerP1D = p1H;
-    wP1Larger = true;
-  } else { //ID Larger Dimension: Portrait mode
-    largerP1D = p1H;
-    smallerP1D = p1W;
-    hP1Larger = true;
-  } //End pic1 larger dimension ID
-  println (smallerP1D, largerP1D);
-  if ( wP1Larger == true ) iWRatioP1 = float (largerP1D) / float (largerP1D);
-  if ( wP1Larger == true ) iHRatioP1 = float (smallerP1D) / float (largerP1D);
-  if ( hP1Larger == true ) iWRatioP1 = float (smallerP1D) / float (largerP1D);
-  if ( hP1Larger == true ) iHRatioP1 = float (largerP1D) / float (largerP1D);
-  println(iWRatioP1, iHRatioP1);
-  rectXPic1 = displayWidth*1/4; 
-  rectYPic1 = displayHeight*0; 
-  rectWidthPic1 = displayWidth*1/2; 
-  rectHeightPic1 = displayHeight*1/2;
-  */
+  p1 = loadImage("pngtree-news-interview-news-report-background-picture-image_1473874.jpg");
+  beginShape();
+   texture(p1);
+   rect(ptX[3], ptY[3], rectWidth, rectHeight*2);
+  endShape(CLOSE);
+  //
+  p2 = loadImage("360_F_65392436_Fx6DsEnZScSCfIwo6bqiCjKcKUCB6OmB.jpg");
+  p3 = loadImage("800px_COLOURBOX7561229.jpg");
+  p4 = loadImage("3693386.jpg");
+  //
+  npFont = createFont("Bahnschrift-48", 55);
+  //dEFont = createFont("Chiller-Regular-48", 55);
 }//End Population
