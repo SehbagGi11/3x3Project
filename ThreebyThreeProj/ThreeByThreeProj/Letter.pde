@@ -43,9 +43,9 @@ void LetterSU() {
   int p4W = 1200;
   int p4H = 900;
   if ( p4W >= p4H ) { //ID Larger Dimension: Landscape and Square
-    largerP3D = p4W;
-    smallerP3D = p4H;
-    wP3Larger = true;
+    largerP4D = p4W;
+    smallerP4D = p4H;
+    wP4Larger = true;
   } else { //ID Larger Dimension: Portrait mode
     largerP4D = p4H;
     smallerP4D = p4W;

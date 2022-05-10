@@ -10,6 +10,7 @@ float[] ptY = new float[numberOfPoints];
 color grey=#E8E8E8, resetDefaultInk=#FFFFFF;
 String NextPage = "Next Page";
 PFont npFont;
+PFont dEFont;
 //
 float rWP2, rHP2;
 PImage p2;
@@ -17,6 +18,8 @@ float iWRatioP2=0.0, iHRatioP2=0.0;
 Boolean wP2Larger=false, hP2Larger=false;
 int largerP2D, smallerP2D;
 float p2WAdjusted, p2HAdjusted;
+//
+String DD = "Dear Diary,";
 //
 void setup()
 {

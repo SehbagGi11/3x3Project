@@ -9,6 +9,26 @@ void Evidence1() {
   
 }//End Evidence
 //
+void Evidence1mP() {
+  if (mouseX>=buttonX[8] && mouseX<=buttonX[8]+buttonWidth[8] && mouseY>=buttonY[8] && mouseY<=buttonY[8]+buttonHeight[8]) {
+    println("BTN 8 Activated");
+    if (Evidence2==true) { //Button will turn On and Off
+      Evidence2=false;
+    } else {
+      Evidence2=true;
+    }
+  }
+}//End DiaryEntry3mP
+//
+void EvidenceText() {
+  rect(buttonX[8], buttonY[8], buttonWidth[8], buttonHeight[8]);
+  fill(grey);
+  textAlign(CENTER, CENTER);
+  textFont(npFont, 50);
+  text(NextPage, buttonX[8], buttonY[8], buttonWidth[8], buttonHeight[8]);
+  fill(black);
+}//End NewsReportText
+//
 void EvidenceSU() {
   int p3W = 800;
   int p3H = 627;
@@ -29,8 +49,8 @@ void EvidenceSU() {
   println(iWRatioP3, iHRatioP3);
   rXP3 = ptX[9]; 
   rYP3 = ptY[9]; 
-  rWP3 = rectWidth; 
-  rHP3 = rectHeight;
+  rWP3 = rectWidth*1/2; 
+  rHP3 = rectHeight*1/2;
   p3WAdjusted = rWP3 * iWRatioP3;
   p3HAdjusted = rHP3 * iHRatioP3;
   println (p3W, p3H);
@@ -41,22 +61,3 @@ void EvidenceDraw() {
   image(p3, rXP3, rYP3, p3WAdjusted, p3HAdjusted);
 }//End NewsReportDraw
 //
-void Evidence1mP() {
-  if (mouseX>=buttonX[8] && mouseX<=buttonX[8]+buttonWidth[8] && mouseY>=buttonY[8] && mouseY<=buttonY[8]+buttonHeight[8]) {
-    println("BTN 8 Activated");
-    if (Evidence2==true) { //Button will turn On and Off
-      Evidence2=false;
-    } else {
-      Evidence2=true;
-    }
-  }
-}//End DiaryEntry3mP
-//
-void EvidenceText() {
-  rect(buttonX[8], buttonY[8], buttonWidth[8], buttonHeight[8]);
-  fill(grey);
-  textAlign(CENTER, CENTER);
-  textFont(npFont, 50);
-  text(NextPage, buttonX[8], buttonY[8], buttonWidth[8], buttonHeight[8]);
-  fill(black);
-}//End NewsReportText

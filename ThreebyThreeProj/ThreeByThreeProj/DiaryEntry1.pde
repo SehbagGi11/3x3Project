@@ -4,8 +4,8 @@ void DiaryEntry1() {
 }//End DiaryEntry1
 //
 void DiaryEntrySU() {
-  int p2W = 536;
-  int p2H = 360;
+  int p2W = 720;
+  int p2H = 576;
   if ( p2W >= p2H ) { //ID Larger Dimension: Landscape and Square
     largerP2D = p2W;
     smallerP2D = p2H;
@@ -54,3 +54,12 @@ void DiaryEntryText() {
   text(NextPage, buttonX[7], buttonY[7], buttonWidth[7], buttonHeight[7]);
   fill(black);
 }//End NewsReportText
+//
+void DE1() {
+  rect(ptX[7]+(rectWidth*1/4), ptY[7], rectWidth*1/2, rectHeight*1/2);
+  fill(grey);
+  textAlign(CENTER, CENTER);
+  textFont(dEFont, 20);
+  text(DD, buttonX[7], buttonY[7], buttonWidth[7], buttonHeight[7]);
+  fill(black);
+}//End DE1
