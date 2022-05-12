@@ -23,7 +23,7 @@ String DD = "Dear Diary,";
 //
 void setup()
 {
-  fullScreen(); //displayWidth, displayHeight
+  fullScreen(); //fullScreen(); //displayWidth, displayHeight
   displayOrientation();
   //
   Population();
